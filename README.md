@@ -1,5 +1,7 @@
 # Mini Portfolio Website
 
+### http://rglanz.github.io
+
 <img src="/assets/thumbnail.png" alt="" width="500px" />
 
 This responsive portfolio website was [originally written](https://github.com/bedimcode/responsive-mini-portfolio) in HTML/CSS/JS.
