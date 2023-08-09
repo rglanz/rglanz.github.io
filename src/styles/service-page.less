@@ -1,0 +1,108 @@
+/*-- -------------------------- -->
+<---          Summary           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #summary {
+    .container {
+      max-width: (800/16rem);
+    }
+
+    .cs-h1 {
+      line-height: 1em;
+    }
+  }
+}
+
+/*-- -------------------------- -->
+  <---         Side-by-side       -->
+  <--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #content {
+    padding-top: 0;
+
+    .cs-container {
+      display: flex;
+      flex-flow: column-reverse;
+      width: 100%;
+      max-width: (600/16rem);
+      height: 100%;
+      margin: auto;
+    }
+
+    .cs-right {
+      width: 100%;
+      max-width: (600/16rem);
+      margin-bottom: (32/16rem);
+    }
+
+    .cs-picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: (600/16rem);
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 4 / 3;
+        border-radius: (20/16rem);
+      }
+    }
+
+    .cs-left {
+      width: 100%;
+      margin-bottom: (64/16rem);
+      text-align: left;
+    }
+
+    .cs-h2 {
+      line-height: 1em;
+
+      & + .cs-p {
+        margin-bottom: (32/16rem);
+      }
+    }
+
+    .cs-price {
+      padding-bottom: (32/16rem);
+      font-weight: 600;
+    }
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 64em) {
+  #content {
+    .cs-container {
+      max-width: (1200/16rem);
+      display: table;
+      table-layout: fixed;
+      &:last-of-type {
+        margin-top: (128/16rem);
+      }
+    }
+
+    .cs-left,
+    .cs-right {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .cs-right {
+      padding-left: (32/16rem);
+    }
+
+    .cs-picture {
+      img {
+        height: 100%;
+        max-width: none;
+        border-radius: 0 (20/16rem) (20/16rem) 0;
+      }
+    }
+  }
+}

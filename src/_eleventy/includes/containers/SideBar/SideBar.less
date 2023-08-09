@@ -1,0 +1,105 @@
+// main: "../../../../styles/_critical.less"
+/*-- -------------------------- -->
+<---         Blog Sidebar       -->
+<--- -------------------------- -*/
+
+/* Mobile  */
+@media only screen and (min-width: 0rem) {
+  #sidebar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: (32/16rem);
+    column-gap: (32/16rem);
+    margin: auto;
+
+    .cs-featured,
+    .cs-subscribe {
+      max-width: (300/16rem);
+      display: flex;
+      flex-direction: column;
+      row-gap: (16/16rem);
+      padding: (32/16rem);
+      border-radius: (10/16rem);
+      box-shadow: var(--bs);
+
+      &:hover {
+        box-shadow: var(--bsPrimary);
+      }
+    }
+
+    .cs-h2 {
+      font-size: clamp((24/16rem), (32 * 100/1024vw), (32/16rem));
+    }
+
+    .cs-subscribe {
+      .cs-h2 {
+        margin-bottom: 0;
+        line-height: 1em;
+      }
+    }
+
+    .cs-post {
+      display: flex;
+      align-items: center;
+      column-gap: (16/16rem);
+      color: #000;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    .cs-p {
+      max-width: (140/16rem);
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      white-space: pre-wrap;
+    }
+
+    .cs-subscribe-text {
+      max-width: none;
+    }
+
+    .cs-email {
+      width: 100%;
+      max-width: fit-content;
+    }
+  }
+}
+
+/* Desktop  */
+@media only screen and (min-width: 64rem) {
+  #sidebar {
+    max-width: (300/16rem);
+    flex-direction: column;
+    row-gap: (64/16rem);
+  }
+}
+
+/* Dark mode  */
+@media only screen and (min-width: 0rem) {
+  body.dark {
+    #sidebar {
+      .cs-featured,
+      .cs-subscribe {
+        box-shadow: var(--bsDark);
+
+        &:hover {
+          box-shadow: var(--bsPrimary);
+        }
+      }
+
+      .cs-post {
+        &:hover {
+          .cs-p {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}

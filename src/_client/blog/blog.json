@@ -1,0 +1,5 @@
+{
+  "layout": "blog-layout.11ty.tsx",
+  "tags": "post",
+  "permalink": "blog/{{slug}}/index.html"
+}

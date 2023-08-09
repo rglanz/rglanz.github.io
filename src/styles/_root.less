@@ -1,0 +1,178 @@
+// Imports [Do Not Edit!]
+@import "../_eleventy/includes/atoms/Button/Button.less";
+@import "../_eleventy/includes/atoms/EmailList/EmailList.less";
+@import "../_eleventy/includes/atoms/Logo/Logo.less";
+@import "../_eleventy/includes/atoms/Typography/Typography.less";
+// End Imports
+/*-- -------------------------- -->
+<---        Core Styles         -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  :root {
+    // Primary colors
+    --primaryLight: #83bac1;
+    --primary: #2f666d;
+    --primaryDark: #004046;
+
+    // Dark mode colors
+    --darkLight: #222c34;
+    --dark: #1a212b;
+    --darkDark: #040c13;
+
+    // Text
+    --text: #000;
+    --textWhite: #ddd;
+    --textLink: #0d8291;
+    --textLinkHover: #598f96;
+    --textSmall: clamp((12/16rem), (14 * 100/1024vw), (14/16rem));
+    --textMedium: clamp((16/16rem), (18 * 100/1024vw), (18/16rem));
+    --textLarge: clamp((18/16rem), (20 * 100/1024vw), (20/16rem));
+    --textH1: clamp((36/16rem), (48 * 100/1024vw), (48/16rem));
+    --textH2: clamp((24/16rem), (36 * 100/1024vw), (36/16rem));
+    --textH3: clamp((20/16rem), (24 * 100/1024vw), (24/16rem));
+
+    // Box-shadow
+    --bs: 4px 4px 24px rgba(0, 0, 0, 0.2);
+    --bsDark: 4px 4px 24px rgba(255, 255, 255, 0.3);
+    --bsPrimary: 4px 4px 24px var(--primary);
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue",
+      sans-serif;
+    color: var(--text);
+    line-height: 1.5em;
+  }
+
+  body {
+    min-width: (320/16rem);
+    transition: background-color 0.2s ease-out;
+    color: var(--text);
+
+    .light {
+      display: block;
+    }
+
+    .dark {
+      display: none;
+    }
+
+    /* To check dark mode before rendering */
+    &.hidden {
+      display: none;
+    }
+  }
+
+  html {
+    overflow-y: scroll; // prevents layout shift on non-scrollable pages
+  }
+
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  section {
+    padding: (60/16rem) (16/16rem);
+    margin: auto;
+  }
+
+  .container {
+    width: 100%;
+    max-width: (1440/16rem);
+    height: 100%;
+    margin: auto;
+    position: relative;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  p,
+  li,
+  a {
+    font-size: (16/16rem);
+    line-height: 1.5em;
+    margin: 0;
+  }
+
+  a {
+    color: var(--textLink);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--textLinkHover);
+    }
+  }
+
+  svg,
+  img,
+  picture {
+    user-select: none;
+  }
+
+  // Hidden screen reader skip nav button
+  .skip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1000;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  section {
+    padding: (60/16rem) (32/16rem);
+  }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  body,
+  html {
+    padding: 0;
+    margin: 0;
+  }
+
+  section {
+    padding: (100/16rem) (48/16rem);
+  }
+}
+
+/* Scale full website with the viewport width */
+@media only screen and (min-width: 2500px) {
+  body,
+  html {
+    font-size: 0.65vw;
+  }
+}
+
+/* Dark mode */
+@media only screen and (min-width: 0em) {
+  body.dark {
+    background-color: var(--darkDark);
+
+    .light {
+      display: none;
+    }
+
+    .dark {
+      display: block;
+    }
+  }
+}

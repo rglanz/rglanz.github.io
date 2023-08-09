@@ -1,0 +1,91 @@
+/*-- -------------------------- -->
+<---          Summary           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #summary .container {
+    max-width: 50rem;
+  }
+  #summary .cs-h1 {
+    line-height: 1em;
+  }
+}
+/*-- -------------------------- -->
+  <---         Side-by-side       -->
+  <--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #content {
+    padding-top: 0;
+  }
+  #content .cs-container {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-flow: column-reverse;
+    width: 100%;
+    max-width: 37.5rem;
+    height: 100%;
+    margin: auto;
+  }
+  #content .cs-right {
+    width: 100%;
+    max-width: 37.5rem;
+    margin-bottom: 2rem;
+  }
+  #content .cs-picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #content .cs-picture img {
+    display: block;
+    width: 100%;
+    max-width: 37.5rem;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    aspect-ratio: 4 / 3;
+    border-radius: 1.25rem;
+  }
+  #content .cs-left {
+    width: 100%;
+    margin-bottom: 4rem;
+    text-align: left;
+  }
+  #content .cs-h2 {
+    line-height: 1em;
+  }
+  #content .cs-h2 + .cs-p {
+    margin-bottom: 2rem;
+  }
+  #content .cs-price {
+    padding-bottom: 2rem;
+    font-weight: 600;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 64em) {
+  #content .cs-container {
+    max-width: 75rem;
+    display: table;
+    table-layout: fixed;
+  }
+  #content .cs-container:last-of-type {
+    margin-top: 8rem;
+  }
+  #content .cs-left,
+  #content .cs-right {
+    display: table-cell;
+    vertical-align: top;
+  }
+  #content .cs-right {
+    padding-left: 2rem;
+  }
+  #content .cs-picture img {
+    height: 100%;
+    max-width: none;
+    border-radius: 0 1.25rem 1.25rem 0;
+  }
+}

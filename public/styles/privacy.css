@@ -1,0 +1,9 @@
+/*-- -------------------------- -->
+<---          Privacy           -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #privacy * {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  }
+}

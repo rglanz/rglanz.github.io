@@ -1,0 +1,61 @@
+// main: "../../../../styles/_root.less"
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  .cs-button {
+    margin: 0;
+    padding: (12/16rem) (16/16rem);
+    text-decoration: none;
+    font-size: (16/16rem);
+    line-height: (24/16rem);
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    background-color: var(--primary);
+    border: 1px solid transparent;
+    border-radius: (4/16rem);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--primaryDark);
+      border-color: var(--primaryDark);
+      color: #fff;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    &.secondary {
+      background-color: #fff;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--primaryDark);
+        border-color: var(--primaryDark);
+      }
+    }
+  }
+}
+
+/* Dark mode */
+@media only screen and (min-width: 0em) {
+  body.dark {
+    .cs-button {
+      &.secondary {
+        background-color: var(--darkDark);
+        color: #fff;
+        border: 1px solid var(--textWhite);
+      }
+
+      &:hover {
+        box-shadow: 2px 2px 16px rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}

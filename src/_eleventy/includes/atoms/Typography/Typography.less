@@ -1,0 +1,161 @@
+// main: "../../../../styles/_root.less"
+
+/*-- -------------------------- -->
+<---         Typography         -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  .cs-h1,
+  .cs-h2,
+  .cs-h3,
+  .cs-p,
+  .cs-article h1,
+  .cs-article h2,
+  .cs-article h3,
+  .cs-article p {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue",
+      sans-serif;
+    color: currentColor;
+    line-height: 1.5em;
+  }
+
+  .cs-h1,
+  .cs-h2,
+  .cs-h3,
+  .cs-article h1,
+  .cs-article h2,
+  .cs-article h3 {
+    font-weight: 600;
+    margin-bottom: (16/16rem);
+  }
+
+  .cs-h1,
+  .cs-article h1 {
+    font-size: var(--textH1);
+  }
+
+  .cs-h2,
+  .cs-article h2 {
+    font-size: var(--textH2);
+  }
+
+  .cs-h3,
+  .cs-article h3 {
+    font-size: var(--textH3);
+  }
+
+  .cs-p,
+  .cs-li,
+  .cs-article p,
+  .cs-article li {
+    font-size: var(--textMedium);
+
+    & + .cs-p {
+      margin-top: var(--textMedium);
+    }
+
+    &.small {
+      font-size: var(--textSmall);
+      & + .small {
+        margin-top: var(--textSmall);
+      }
+    }
+
+    &.large {
+      font-size: var(--textLarge);
+      & + .large {
+        margin-top: var(--textLarge);
+      }
+    }
+
+    &.bold {
+      font-weight: 600;
+    }
+  }
+
+  .cs-li,
+  .cs-article li {
+    &:last-of-type {
+      margin-bottom: var(--textMedium);
+    }
+  }
+
+  .cs-a,
+  .cs-article a {
+    color: var(--textLink);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--textLinkHover);
+    }
+  }
+
+  .cs-topper {
+    text-transform: uppercase;
+    font-size: clamp((12/16rem), (14 * 100/1024vw), (14/16rem));
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0;
+  }
+}
+
+/* Dark mode */
+@media only screen and (min-width: 0em) {
+  body.dark {
+    .cs-h1,
+    .cs-h2,
+    .cs-h3,
+    .cs-p,
+    .cs-li,
+    .cs-article h1,
+    .cs-article h2,
+    .cs-article h3,
+    .cs-article p,
+    .cs-article li {
+      color: var(--textWhite);
+    }
+  }
+}
+
+/*-- -------------------------- -->
+<---            Blog            -->
+<--- -------------------------- -*/
+
+/* Blog styles */
+@media only screen and (min-width: 0em) {
+  .cs-article {
+    @font-face {
+      font-display: swap;
+      font-family: "Lora";
+      font-style: normal;
+      font-weight: 400;
+      src: url("/assets/fonts/lora-v32-latin-regular.woff2") format("woff2");
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    li {
+      font-family: "Lora", Palatino, serif;
+      color: currentColor;
+      line-height: 1.5em;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: var(--textMedium);
+
+      & + h2 {
+        margin-top: (32/16rem);
+      }
+    }
+
+    ol,
+    ul {
+      padding-left: (32/16rem);
+    }
+  }
+}

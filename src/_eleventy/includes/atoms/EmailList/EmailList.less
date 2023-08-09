@@ -1,0 +1,59 @@
+// main: "../../../../styles/_root.less"
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  .cs-email-list {
+    #cs-email-list-form {
+      display: flex;
+      align-items: center;
+    }
+
+    .cs-email {
+      width: (300/16rem);
+      font-size: (16/16rem);
+      padding: (8/16rem);
+      border: 1px solid #ccc;
+      border-right: none;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        border: 1px solid var(--primary);
+      }
+    }
+
+    .cs-submit {
+      width: (36/16rem);
+      height: (36/16rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+      border-top-right-radius: (4/16rem);
+      border-bottom-right-radius: (4/16rem);
+    }
+
+    .cs-icon {
+      filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(21deg)
+        brightness(106%) contrast(101%);
+    }
+  }
+}
+
+/* Dark mode */
+@media only screen and (min-width: 0rem) {
+  body.dark {
+    .cs-email-list {
+      .cs-email {
+        background-color: var(--darkLight);
+        color: #fff;
+        border: 1px solid transparent;
+        border-right: none;
+
+        &:focus,
+        &:hover {
+          border: 1px solid var(--primaryLight);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+// main: "../../../../styles/_critical.less"
+
+/*-- -------------------------- -->
+<---             CTA            -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #cta {
+    padding: 0;
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: none;
+      height: (400/16rem);
+    }
+
+    // Background image
+    .cs-picture {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: (400/16rem);
+      clip-path: inset(0);
+      background-color: #000;
+      z-index: -1;
+
+      img {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: #000;
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+    }
+
+    .cs-container {
+      width: 100%;
+      height: (400/16rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: (32/16rem);
+    }
+
+    // Overrides Typography
+    .cs-h2 {
+      width: fit-content;
+      font-size: var(--textH1);
+      text-align: center;
+      color: #fff;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    // Overrides Button
+    .cs-button {
+      width: fit-content;
+      background-color: transparent;
+      color: #fff;
+      border-color: #fff;
+      font-size: var(--textH3);
+      text-shadow: 2px 2px 8px #000;
+      box-shadow: 2px 2px 8px #000;
+
+      &:hover {
+        animation: pulsate 3s ease-out infinite;
+      }
+
+      @-webkit-keyframes pulsate {
+        0% {
+          box-shadow: 0 0 0 #fff;
+        }
+        50% {
+          box-shadow: 0 0 24px #fff;
+        }
+        100% {
+          box-shadow: 0 0 0 #fff;
+        }
+      }
+    }
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 64em) {
+  #cta {
+    .container,
+    .cs-picture,
+    .cs-container {
+      height: (500/16rem);
+    }
+  }
+}
