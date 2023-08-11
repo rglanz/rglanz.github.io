@@ -1,6 +1,0 @@
-{
-    "less.compile": {
-      "autoprefixer": "> 5%, last 5 versions, Firefox ESR, not dead",
-      "out": "${workspaceRoot}/public/styles/"
-    }
-}

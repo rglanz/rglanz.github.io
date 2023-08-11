@@ -9,6 +9,8 @@
     "@11ty/eleventy-img": "^3.1.0",
     "@11ty/eleventy-server-browsersync": "^1.0.2",
     "esbuild-register": "^3.4.2",
+    "less": "^4.2.0",
+    "less-plugin-autoprefix": "^2.0.0",
     "markdown-it": "^13.0.1",
     "nanoid": "^4.0.2",
     "preact": "^10.15.0",

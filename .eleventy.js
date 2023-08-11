@@ -1,16 +1,11 @@
-const {
-  importAtoms,
-  importContainers,
-} = require("./src/_eleventy/shortcodes/less.jsx");
+const { buildLess } = require("./src/_eleventy/shortcodes/less");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
+  eleventyConfig.addWatchTarget("./src/_eleventy/includes/**/*.less");
+  eleventyConfig.addWatchTarget("./src/styles/*.less");
   eleventyConfig.addPassthroughCopy({
     "src/_client/assets": "assets",
-    "src/_client/blog/**/*.webp": "assets/images",
-    "src/_client/blog/**/*.jpeg": "assets/images",
-    "src/_client/blog/**/*.jpg": "assets/images",
-    "src/_client/blog/**/*.png": "assets/images",
     "src/_eleventy/includes/**/*.svg": "/assets/svgs/",
   });
 
@@ -26,10 +21,9 @@ module.exports = function (eleventyConfig) {
     files: ["src/"],
   });
 
-  // Generate LESS imports
+  // Compile LESS
   eleventyConfig.on("eleventy.after", () => {
-    importAtoms();
-    importContainers();
+    buildLess();
   });
 
   return {

@@ -51,64 +51,13 @@
 }
 /* Mobile */
 @media only screen and (min-width: 0rem) {
-  .cs-email-list #cs-email-list-form {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-            align-items: center;
-  }
-  .cs-email-list .cs-email {
-    width: 18.75rem;
-    font-size: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-right: none;
-  }
-  .cs-email-list .cs-email:focus,
-  .cs-email-list .cs-email:hover {
-    outline: none;
-    border: 1px solid var(--primary);
-  }
-  .cs-email-list .cs-submit {
-    width: 2.25rem;
-    height: 2.25rem;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-            justify-content: center;
-    border-radius: 0;
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
-  }
-  .cs-email-list .cs-icon {
-    -webkit-filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(21deg) brightness(106%) contrast(101%);
-            filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(21deg) brightness(106%) contrast(101%);
-  }
-}
-/* Dark mode */
-@media only screen and (min-width: 0rem) {
-  body.dark .cs-email-list .cs-email {
-    background-color: var(--darkLight);
-    color: #fff;
-    border: 1px solid transparent;
-    border-right: none;
-  }
-  body.dark .cs-email-list .cs-email:focus,
-  body.dark .cs-email-list .cs-email:hover {
-    border: 1px solid var(--primaryLight);
-  }
-}
-/* Mobile */
-@media only screen and (min-width: 0rem) {
   .cs-logo {
     display: block;
     position: relative;
     top: 0;
     left: 0;
     margin: 0;
-    width: 9.375rem;
+    width: 3.125rem;
     height: 100%;
     -o-object-fit: contain;
        object-fit: contain;
@@ -117,7 +66,7 @@
 /* Desktop */
 @media only screen and (min-width: 64rem) {
   .cs-logo {
-    width: 12.5rem;
+    width: 6.25rem;
   }
 }
 /* Dark mode */
@@ -283,9 +232,9 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   :root {
-    --primaryLight: #83bac1;
-    --primary: #2f666d;
-    --primaryDark: #004046;
+    --primaryLight: #7ab7e9;
+    --primary: #218ecb;
+    --primaryDark: #005181;
     --darkLight: #222c34;
     --dark: #1a212b;
     --darkDark: #040c13;

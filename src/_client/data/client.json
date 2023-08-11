@@ -1,15 +1,5 @@
 {
-    "name": "Cedar Studios Web Design",
-    "email": "info@cedarstudioswebdesign.com",
-    "phone": "3195383134",
-    "phoneFormatted": "(319) 538-3134",
-    "address": {
-      "lineOne": "First Address Line",
-      "lineTwo": "Second Address Line, If Needed",
-      "city": "Cedar Rapids",
-      "state": "IA",
-      "postcode": "52402",
-      "mapLink": "https://goo.gl/maps/n8yBDEZyxDnFVqNV6"
-    },
-    "domain": "www.cedarstudioswebdesign.com"
-  }
+    "name": "Ryan Glanz",
+    "email": "glanzrm@gmail.com",
+    "domain": "rglanz.github.io"
+}

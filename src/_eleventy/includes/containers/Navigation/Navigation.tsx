@@ -1,98 +1,19 @@
 import { h, Fragment } from "preact";
-import navigation from "../../../shortcodes/navigation";
 import Logo from "../../atoms/Logo/Logo";
 
 interface IProps {
   data: object;
-  link: object;
-  name: string;
-  url: string;
-  order: string;
-  children: object[];
-  isActive: boolean;
-  hasActiveChild: boolean;
 }
-
-const buildRoot = (link: IProps) => {
-  let className = "cs-li-link";
-  if (link.isActive) {
-    className = `${className} cs-active`;
-  }
-
-  if (link.name === "Contact") {
-    className = `${className} cs-contact`;
-  }
-
-  return (
-    <li className="cs-li">
-      <a href={link.url} className={className}>
-        {link.name}
-      </a>
-    </li>
-  );
-};
-
-const buildParent = (link: IProps) => {
-  return (
-    <li className="cs-li cs-dropdown" tabIndex={0}>
-      <span className={`cs-li-link ${link.hasActiveChild ? "cs-active" : ""}`}>
-        {link.name}
-        <img
-          src="/assets/svgs/drop-icon.svg"
-          alt="dropdown icon"
-          className="cs-drop-icon"
-          width="15"
-          height="15"
-          aria-hidden="true"
-          decoding="async"
-        />
-      </span>
-
-      <ul className="cs-drop-ul">
-        {link.children.map((child) => {
-          return (
-            <li className="cs-drop-li">
-              <a
-                href={child.url}
-                className={`cs-li-link cs-drop-link ${
-                  child.isActive ? "cs-active" : ""
-                }`}
-              >
-                {child.name}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </li>
-  );
-};
-
-const links = (data: IProps) => {
-  const linkComponents = data.map((link) => {
-    if (link.type === "root") {
-      return buildRoot(link);
-    } else {
-      return buildParent(link);
-    }
-  });
-
-  return linkComponents;
-};
 
 export default ({ data }: IProps) => {
   const domain: string = data.client.domain;
-  const filteredData = navigation(data.collections.all, data.page.url);
+  const email = data.client.email;
 
   return (
     <header id="navigation">
       <div className="cs-container">
         {/* Logo */}
-        <a
-          href={`https://${domain}`}
-          className="cs-logo-link"
-          aria-label="Go to Home."
-        >
+        <a href="/" className="cs-logo-link" aria-label="Go to Home.">
           <Logo />
         </a>
 
@@ -100,7 +21,26 @@ export default ({ data }: IProps) => {
         <nav className="cs-nav" role="navigation">
           <div className="cs-ul-wrapper">
             <ul id="cs-expanded" className="cs-ul" aria-expanded="false">
-              {links(filteredData)}
+              <li className="cs-li">
+                <a href="/" className="cs-li-link">
+                  Home
+                </a>
+              </li>
+              <li className="cs-li">
+                <a href="#about" className="cs-li-link">
+                  About
+                </a>
+              </li>
+              <li className="cs-li">
+                <a href="#projects" className="cs-li-link">
+                  Projects
+                </a>
+              </li>
+              <li className="cs-li">
+                <a href={`mailto:${email}`} className="cs-li-link cs-contact">
+                  Contact Me
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -122,7 +62,7 @@ export default ({ data }: IProps) => {
               aria-hidden="true"
               width="24"
               height="24"
-              decode="async"
+              decoding="async"
             />
             <img
               src="/assets/svgs/sun.svg"
@@ -131,7 +71,7 @@ export default ({ data }: IProps) => {
               aria-hidden="true"
               width="24"
               height="24"
-              decode="async"
+              decoding="async"
             />
           </label>
 

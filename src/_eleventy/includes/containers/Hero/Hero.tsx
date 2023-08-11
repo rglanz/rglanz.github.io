@@ -5,16 +5,8 @@ import image from "../../../shortcodes/image";
 
 const heroImage = image({
   src: `${__dirname}/assets/hero.png`,
-  alt: "tree of life",
-  className: "cs-picture light",
-  loading: "eager",
-  sizes: "(max-width: 768px) 400px, 700px",
-});
-
-const heroImageDark = image({
-  src: `${__dirname}/assets/hero-dark.png`,
-  alt: "tree of life",
-  className: "cs-picture dark",
+  alt: "portfolio image",
+  className: "cs-picture",
   loading: "eager",
   sizes: "(max-width: 768px) 400px, 700px",
 });
@@ -23,29 +15,16 @@ export default () => {
   return (
     <section id="hero">
       <div className="container">
-        <div className="cs-left">
-          <Fragment>
-            {heroImage}
-            {heroImageDark}
-          </Fragment>
-        </div>
+        <div className="cs-left">{heroImage}</div>
 
         <div className="cs-right">
-          <Topper>Cedar Studios Web Design</Topper>
-          <H1>
-            Small Business
-            <br />
-            Web Design
-          </H1>
-          <P size="large">
-            Gain more customers with a beautiful, performance-driven website.
-            Starting at $150/mo.
-          </P>
+          <Topper>Software Engineer</Topper>
+          <H1>Ryan Glanz</H1>
           <div className="cs-button-container">
+            <Button href="mailto:glanzrm@gmail.com">Get In Touch</Button>
             <Button secondary href="#about">
-              Learn More
+              More About Me ↓
             </Button>
-            <Button href="/contact">Get Started</Button>
           </div>
         </div>
       </div>

@@ -1,127 +1,72 @@
 /*-- -------------------------- -->
-<---         Services           -->
+<---          Skills            -->
 <--- -------------------------- -*/
 
 /* Mobile */
 @media only screen and (min-width: 0em) {
-  #services {
-    padding: (0/16rem) 0 (60/16rem) 0;
+  #skills {
     background-color: var(--primaryDark);
     position: relative;
 
     .container {
+      max-width: (680/16rem);
       padding: 0 (16/16rem);
       display: flex;
-      flex-direction: column;
-      row-gap: (32/16rem);
-    }
-
-    .cs-arrows {
-      width: 100%;
-      height: (60/16rem);
-      position: relative;
-      top: (-59/16rem);
-      left: 0;
-      user-select: none;
-    }
-
-    .cs-row {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      row-gap: (32/16rem);
-      column-gap: (128/16rem);
-    }
-
-    .cs-card {
-      display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: (16/16rem);
-
-      .cs-p {
-        margin: 0;
-      }
+      row-gap: (32/16rem);
+      column-gap: (32/16rem);
     }
 
-    .cs-title {
-      font-size: var(--textH3);
-      margin-bottom: (4/16rem);
+    .cs-skill {
+      width: (100/16rem);
+      height: (72/16rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: (4/16rem);
     }
 
     .cs-icon {
       width: (40/16rem);
       height: (40/16rem);
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+        hue-rotate(74deg) contrast(101%);
     }
 
-    .cs-text-container {
+    .cs-skill-title {
       color: #fff;
-    }
-
-    // Overrides Typography
-    H3 {
-      margin-bottom: (4/16rem);
-    }
-
-    p {
-      max-width: (400/16rem);
-    }
-  }
-}
-
-/* Tablet */
-@media only screen and (min-width: 48em) {
-  #services {
-    .cs-row {
-      flex-direction: row;
-    }
-
-    .cs-icon {
-      width: (60/16rem);
-      height: (60/16rem);
+      white-space: nowrap;
     }
   }
 }
 
 /* Desktop */
 @media only screen and (min-width: 64em) {
-  #services {
-    padding-bottom: (100/16rem);
-
-    .cs-arrows {
-      height: (100/16rem);
-      top: (-99/16rem);
-    }
-
-    .cs-icon {
-      width: (80/16rem);
-      height: (80/16rem);
-    }
+  #skills {
+    padding-block: (60/16rem);
   }
 }
 
 /* Dark mode */
 @media only screen and (min-width: 0em) {
   body.dark {
-    #services {
-      background-color: #002123;
-
-      .cs-arrows {
-        filter: invert(12%) brightness(50%) contrast(108%);
-      }
+    #skills {
+      background-color: #001f31;
     }
   }
 }
 
 /*-- -------------------------- -->
-<---         About Us           -->
+<---         About Me           -->
 <--- -------------------------- -*/
 
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #about {
     .cs-left {
-      font-size: ~"min(1.91vw, .61em)";
+      font-size: ~"min(2vw, .61em)";
       position: relative;
       width: (562/16em);
       height: (675/16em);
@@ -148,7 +93,7 @@
 
     .cs-img-1 {
       width: (450/16em);
-      height: (478/16em);
+      height: (480/16em);
       position: absolute;
       top: (50/16em);
       left: (150/16em);
@@ -159,8 +104,8 @@
     .cs-img-container {
       display: block;
       position: absolute;
-      width: (301/16em);
-      height: (389/16em);
+      width: (401/16em);
+      height: (409/16em);
       bottom: (20/16em);
       left: (-48/16em);
       border-radius: 10px;
@@ -169,10 +114,10 @@
     }
 
     .cs-img-2 {
-      width: (281/16em);
+      width: (361/16em);
       height: (369/16em);
-      top: (10/16em);
-      left: (10/16em);
+      top: (20/16em);
+      left: (20/16em);
       position: absolute;
       border-radius: 10px;
       box-shadow: var(--bs);
@@ -180,49 +125,52 @@
 
     .cs-right {
       text-align: center;
+
+      p {
+        max-width: (400/16rem);
+        margin: auto;
+        margin-bottom: (32/16rem);
+      }
     }
 
     .cs-container {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       max-width: (300/16rem);
       margin: auto;
       row-gap: (16/16rem);
-      margin-bottom: (32/16rem);
-    }
-
-    .cs-top > p {
-      max-width: (450/16rem);
-      margin: auto;
-      margin-bottom: (32/16rem);
-    }
-
-    .cs-row {
-      display: flex;
-      flex-wrap: wrap;
       column-gap: (32/16rem);
-      row-gap: (16/16rem);
     }
 
-    .cs-card-title {
-      display: flex;
-      align-items: center;
+    .cs-button {
+      min-width: (150/16rem);
 
-      .cs-p {
-        max-width: (300/16rem);
-        margin: 0;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: (8/16rem);
       }
-    }
 
-    .cs-icon {
-      width: (18/16rem);
-      height: (18/16rem);
-      margin-right: (8/16rem);
-    }
+      .cs-icon {
+        filter: invert(44%) sepia(81%) saturate(541%) hue-rotate(158deg)
+          brightness(92%) contrast(88%);
+      }
 
-    .cs-card {
-      text-align: left;
+      .cs-icon-white {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(21%)
+          hue-rotate(71deg) contrast(100%);
+      }
+
+      &:hover {
+        .cs-icon {
+          filter: invert(20%) sepia(52%) saturate(3216%) hue-rotate(183deg)
+            brightness(91%) contrast(102%);
+        }
+      }
     }
   }
 }
@@ -230,29 +178,14 @@
 /* Tablet */
 @media only screen and (min-width: 48em) {
   #about {
-    .cs-top > p {
-      max-width: (600/16rem);
-    }
-
     .cs-container {
-      max-width: none;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .cs-row {
-      justify-content: flex-start;
-      align-items: center;
-    }
-
-    .cs-card {
-      width: (300/16rem);
+      flex-direction: row;
     }
   }
 }
 
-/* Desktop 1136 px*/
-@media only screen and (min-width: 71em) {
+/* Desktop */
+@media only screen and (min-width: 64em) {
   #about {
     padding-left: (80/16rem);
 
@@ -263,19 +196,18 @@
       align-items: center;
     }
 
-    .cs-row {
-      align-items: center;
-      justify-content: center;
-    }
-
     .cs-left {
-      font-size: ~"min(1.91vw, .81em)";
+      font-size: ~"min(1.91vw, .61em)";
       max-width: (600/16em);
       margin: auto;
     }
 
     .cs-right {
       width: 100%;
+
+      p {
+        max-width: (600/16rem);
+      }
     }
   }
 }
@@ -286,7 +218,6 @@
     #about {
       .cs-left {
         &:before {
-          background: 002123;
           background: linear-gradient(to right, var(--primaryDark), #002123);
           box-shadow: var(--bsDark);
         }
@@ -297,17 +228,25 @@
       .cs-img-2 {
         box-shadow: var(--bsDark);
       }
+
+      .cs-button {
+        .cs-icon,
+        .cs-icon-white {
+          filter: brightness(0) saturate(100%) invert(100%) sepia(21%)
+            hue-rotate(71deg) contrast(100%);
+        }
+      }
     }
   }
 }
 
 /*-- -------------------------- -->
-<---         Portfolio          -->
+<---         Projects          -->
 <--- -------------------------- -*/
 
 /* Mobile */
 @media only screen and (min-width: 0em) {
-  #portfolio {
+  #projects {
     padding-bottom: (100/16rem);
     background-color: #f8f8f8;
     text-align: center;
@@ -337,7 +276,8 @@
         max-height: (400/16rem);
         border-radius: (40/16rem);
         box-shadow: var(--bsLight);
-        aspect-ratio: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
         transition: box-shadow 0.3s ease;
       }
 
@@ -349,6 +289,7 @@
         align-items: center;
         justify-content: center;
         position: absolute;
+        row-gap: (32/16rem);
         top: 0;
         left: 0;
         width: 100%;
@@ -375,12 +316,12 @@
       }
     }
 
-    .cs-p.large {
-      margin-bottom: (8/16rem);
+    .cs-p {
+      margin: 0;
     }
 
-    .cs-p.small {
-      margin-bottom: (32/16rem);
+    .cs-p.large {
+      font-size: (24/16rem);
     }
 
     .cs-link {
@@ -399,7 +340,7 @@
 
 /* Desktop */
 @media only screen and (min-width: 64em) {
-  #portfolio {
+  #projects {
     .cs-card-container {
       flex-direction: row;
     }
@@ -409,7 +350,7 @@
 /* Dark mode */
 @media only screen and (min-width: 0em) {
   body.dark {
-    #portfolio {
+    #projects {
       background-color: var(--dark700);
 
       .cs-thumbnail {

@@ -14,15 +14,9 @@ export default () => {
       <div className="container">
         {background}
         <div className="cs-container">
-          <H2>
-            Get a beautiful,
-            <br />
-            performance-driven
-            <br />
-            website.
-          </H2>
-          <Button secondary href="/contact">
-            Drop Us A Line
+          <H2>Want To Connect?</H2>
+          <Button secondary href="mailto:glanzrm@gmail.com">
+            Send Me A Message
           </Button>
         </div>
       </div>
