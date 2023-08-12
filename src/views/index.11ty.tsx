@@ -251,14 +251,14 @@ module.exports = {
   render: Page,
   data: () => ({
     title: "Home",
-    tagTitle: "Small Business Websites",
-    metaTitle: "Cedar Studios Web Design",
+    tagTitle: "Portfolio",
+    metaTitle: "Ryan Glanz | Software Engineer",
     metaDescription:
-      "Land more customers with a beautiful, performance-driven website. Starting at $150/mo.",
+      "I take a multidisciplinary approach to software development by combining my engineering skill with my academic background in Psychology to create intuitive and user-centric technology.",
     layout: "base.11ty.tsx",
     permalink: "/",
     css: "/styles/index.css",
-    preloadImage: "/assets/images/hero-800w.webp",
+    preloadImage: "/assets/images/responsive/hero-800w.webp",
     eleventyNavigation: { key: "Home", order: 100 },
   }),
 };
